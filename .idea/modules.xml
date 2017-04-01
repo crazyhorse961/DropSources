@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://F://SourceDrops/SourceDrops.iml" filepath="F://SourceDrops/SourceDrops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SourceDrops.iml" filepath="$PROJECT_DIR$/SourceDrops.iml" />
     </modules>
   </component>
 </project>
