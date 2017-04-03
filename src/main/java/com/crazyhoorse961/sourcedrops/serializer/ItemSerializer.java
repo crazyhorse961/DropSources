@@ -49,6 +49,7 @@ public class ItemSerializer
     private String getCache(){
         try {
             byte[] encoded = Files.readAllBytes(Paths.get(plugin.getDataFolder() + File.separator + "cache.src"));
+            System.out.println(encoded);
             List<String> lines = FileUtils.readLines(new File(plugin.getDataFolder() + File.separator + "cache.src"), Charset.defaultCharset());
             List<String> updatedLines = lines.stream().filter(s -> !s.contains("cache-item")).collect(Collectors.toList());
             FileUtils.writeLines(new File(plugin.getDataFolder() + File.separator + "cache.src"), updatedLines, false);

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="037e6ffc-742b-4c27-87a3-5d67e34d60d3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" afterPath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java" afterPath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -64,8 +63,8 @@
       <file leaf-file-name="ItemSerializer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="34" column="85" lean-forward="false" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
+            <state relative-caret-position="323">
+              <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
               <folding>
                 <element signature="e#1084#1085#0" expanded="true" />
                 <element signature="e#1111#1112#0" expanded="true" />
@@ -659,7 +658,7 @@
       <updated>1491041034431</updated>
       <workItem from="1491041043765" duration="2924000" />
       <workItem from="1491044302492" duration="6656000" />
-      <workItem from="1491231523710" duration="4492000" />
+      <workItem from="1491231523710" duration="4947000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit">
       <created>1491041749267</created>
@@ -745,11 +744,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491235954865</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Forgot Files.separator ;P">
+      <created>1491236034371</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1491236034371</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14072000" />
+    <option name="totallyTimeSpent" value="14527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -806,7 +812,8 @@
     <MESSAGE value="Shade plugin" />
     <MESSAGE value="Fixed plugin.yml" />
     <MESSAGE value="Probably fixed cache.src not generating&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Probably fixed cache.src not generating&#10;" />
+    <MESSAGE value="Forgot Files.separator ;P" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forgot Files.separator ;P" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1099,8 +1106,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="34" column="85" lean-forward="false" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
+        <state relative-caret-position="323">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
           <folding>
             <element signature="e#1084#1085#0" expanded="true" />
             <element signature="e#1111#1112#0" expanded="true" />
