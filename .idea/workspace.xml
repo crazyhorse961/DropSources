@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="037e6ffc-742b-4c27-87a3-5d67e34d60d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SourceDrops.iml" afterPath="$PROJECT_DIR$/SourceDrops.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" afterPath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,6 +30,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SourceDrop.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="59" column="51" lean-forward="false" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -83,9 +89,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/commands/DumpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ChestSerializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" />
       </list>
     </option>
   </component>
@@ -609,7 +615,7 @@
       <updated>1491041034431</updated>
       <workItem from="1491041043765" duration="2924000" />
       <workItem from="1491044302492" duration="6656000" />
-      <workItem from="1491231523710" duration="4033000" />
+      <workItem from="1491231523710" duration="4416000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit">
       <created>1491041749267</created>
@@ -681,11 +687,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491234632408</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed plugin.yml">
+      <created>1491235566184</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1491235566184</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13613000" />
+    <option name="totallyTimeSpent" value="13996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -740,7 +753,8 @@
     <MESSAGE value="Updates... :P" />
     <MESSAGE value="Updated itemserialized, addes commons io, created cache file method.&#10;Gotta run first test :)" />
     <MESSAGE value="Shade plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shade plugin" />
+    <MESSAGE value="Fixed plugin.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed plugin.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -763,14 +777,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-          <folding>
-            <element signature="e#900#901#0" expanded="false" />
-            <element signature="e#928#929#0" expanded="false" />
-            <element signature="e#961#962#0" expanded="false" />
-            <element signature="e#990#991#0" expanded="false" />
-            <element signature="e#1041#1042#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,14 +894,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#900#901#0" expanded="false" />
-            <element signature="e#928#929#0" expanded="false" />
-            <element signature="e#961#962#0" expanded="false" />
-            <element signature="e#990#991#0" expanded="false" />
-            <element signature="e#1041#1042#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,21 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-          <folding>
-            <element signature="e#900#901#0" expanded="false" />
-            <element signature="e#928#929#0" expanded="false" />
-            <element signature="e#961#962#0" expanded="false" />
-            <element signature="e#990#991#0" expanded="false" />
-            <element signature="e#1041#1042#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -1059,6 +1044,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="59" column="51" lean-forward="false" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
           <folding />
         </state>
       </provider>

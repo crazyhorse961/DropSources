@@ -56,6 +56,9 @@ public class SourceDrop extends JavaPlugin
         cache = new File(getDataFolder() + "cache.src");
         if (!cache.exists()) {
             try {
+                if(!cache.getParentFile().exists()){
+                    cache.getParentFile().mkdirs();
+                }
                 cache.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
