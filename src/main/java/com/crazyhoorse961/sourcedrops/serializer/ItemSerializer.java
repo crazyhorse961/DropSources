@@ -32,7 +32,7 @@ public class ItemSerializer
     public String serialize(ItemStack is){
         Map<String,Object> values = is.serialize();
         try {
-            PrintWriter pw = new PrintWriter(plugin.getDataFolder() + "cache.src");
+            PrintWriter pw = new PrintWriter(plugin.getDataFolder() + File.separator + "cache.src");
             pw.write("cache-item " + values);
             pw.close();
         }catch(FileNotFoundException e){
@@ -48,10 +48,10 @@ public class ItemSerializer
 
     private String getCache(){
         try {
-            byte[] encoded = Files.readAllBytes(Paths.get(plugin.getDataFolder() + "cache.src"));
-            List<String> lines = FileUtils.readLines(new File(plugin.getDataFolder() + "cache.src"), Charset.defaultCharset());
+            byte[] encoded = Files.readAllBytes(Paths.get(plugin.getDataFolder() + File.separator + "cache.src"));
+            List<String> lines = FileUtils.readLines(new File(plugin.getDataFolder() + File.separator + "cache.src"), Charset.defaultCharset());
             List<String> updatedLines = lines.stream().filter(s -> !s.contains("cache-item")).collect(Collectors.toList());
-            FileUtils.writeLines(new File(plugin.getDataFolder() + "cache.src"), updatedLines, false);
+            FileUtils.writeLines(new File(plugin.getDataFolder() + File.separator + "cache.src"), updatedLines, false);
             return String.valueOf(encoded).split(" ")[1];
         }catch(IOException e){
             e.printStackTrace();
