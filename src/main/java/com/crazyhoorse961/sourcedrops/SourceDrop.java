@@ -2,7 +2,6 @@ package com.crazyhoorse961.sourcedrops;/**
  * Created by nini7 on 01.04.2017.
  */
 
-import com.crazyhoorse961.sourcedrops.serializer.ChestSerializer;
 import com.crazyhoorse961.sourcedrops.serializer.ItemSerializer;
 import com.crazyhoorse961.sourcedrops.utils.Dumper;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,7 +16,6 @@ public class SourceDrop extends JavaPlugin
 {
 
     private Dumper dumper;
-    private ChestSerializer chestSerializer;
     private File cache;
     private ItemSerializer itemSerializer;
 
@@ -26,9 +24,7 @@ public class SourceDrop extends JavaPlugin
         saveDefaultConfig();
         createCache();
         dumper = new Dumper();
-        chestSerializer = new ChestSerializer(this);
         itemSerializer = new ItemSerializer(this);
-        System.out.println(itemSerializer);
     }
 
     @Override
@@ -38,10 +34,6 @@ public class SourceDrop extends JavaPlugin
 
     public Dumper getDumper() {
         return dumper;
-    }
-
-    public ChestSerializer getChestSerializer() {
-        return chestSerializer;
     }
 
     public File getCache() {

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="037e6ffc-742b-4c27-87a3-5d67e34d60d3" name="Default" comment="">
+    <list default="true" id="037e6ffc-742b-4c27-87a3-5d67e34d60d3" name="Default" comment="Removed ChestSerializer - I won't need it">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ChestSerializer.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java" afterPath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" afterPath="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SourceDrop.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SourceDrop.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="55" column="57" lean-forward="false" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
+            <state relative-caret-position="450">
+              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -60,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemSerializer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ItemSerializer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -102,11 +103,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/events/EventFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/utils/Dumper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/commands/DumpCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ChestSerializer.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ItemSerializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ChestSerializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java" />
       </list>
     </option>
   </component>
@@ -746,7 +747,7 @@
       <updated>1491041034431</updated>
       <workItem from="1491041043765" duration="2924000" />
       <workItem from="1491044302492" duration="6656000" />
-      <workItem from="1491231523710" duration="5472000" />
+      <workItem from="1491231523710" duration="5909000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit">
       <created>1491041749267</created>
@@ -846,11 +847,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491236496839</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="I'll reinvent the wheel another day...">
+      <created>1491237019126</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1491237019126</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15052000" />
+    <option name="totallyTimeSpent" value="15489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -859,6 +867,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -883,7 +892,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -909,7 +917,9 @@
     <MESSAGE value="Probably fixed cache.src not generating&#10;" />
     <MESSAGE value="Forgot Files.separator ;P" />
     <MESSAGE value="Trying to fix item not displaying correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix item not displaying correctly" />
+    <MESSAGE value="I'll reinvent the wheel another day..." />
+    <MESSAGE value="Removed ChestSerializer - I won't need it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed ChestSerializer - I won't need it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -968,12 +978,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#416#417#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-            <element signature="e#540#548#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,19 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ChestSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#416#417#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-            <element signature="e#540#548#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -1192,10 +1184,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/serializer/ChestSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="55" column="57" lean-forward="false" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
+        <state relative-caret-position="374">
+          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1210,6 +1202,14 @@
             <element signature="e#1580#1610#0" expanded="true" />
             <element signature="e#2165#2195#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
