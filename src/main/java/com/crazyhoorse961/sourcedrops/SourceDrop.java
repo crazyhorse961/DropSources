@@ -2,6 +2,7 @@ package com.crazyhoorse961.sourcedrops;/**
  * Created by nini7 on 01.04.2017.
  */
 
+import com.crazyhoorse961.sourcedrops.commands.DumpCommand;
 import com.crazyhoorse961.sourcedrops.serializer.ItemSerializer;
 import com.crazyhoorse961.sourcedrops.utils.Dumper;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,6 +26,8 @@ public class SourceDrop extends JavaPlugin
         createCache();
         dumper = new Dumper();
         itemSerializer = new ItemSerializer(this);
+        new DumpCommand(this);
+
     }
 
     @Override
