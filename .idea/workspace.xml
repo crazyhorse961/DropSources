@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="037e6ffc-742b-4c27-87a3-5d67e34d60d3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SourceDrops.iml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SourceDrop.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SourceDrop.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/crazyhoorse961/sourcedrops/SourceDrop.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
@@ -39,6 +39,26 @@
                 <element signature="e#753#754#0" expanded="true" />
                 <element signature="e#782#783#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.git/config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -350,7 +370,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.git/config" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -748,7 +768,7 @@
       <workItem from="1491044302492" duration="6656000" />
       <workItem from="1491231523710" duration="5931000" />
       <workItem from="1491301935224" duration="118000" />
-      <workItem from="1491302136524" duration="29000" />
+      <workItem from="1491302136524" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit">
       <created>1491041749267</created>
@@ -862,11 +882,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491237448799</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Trying to remove from git the .iml file">
+      <created>1491302193599</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1491302193599</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15658000" />
+    <option name="totallyTimeSpent" value="16299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -927,7 +954,8 @@
     <MESSAGE value="Trying to fix item not displaying correctly" />
     <MESSAGE value="I'll reinvent the wheel another day..." />
     <MESSAGE value="Removed ChestSerializer - I won't need it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed ChestSerializer - I won't need it" />
+    <MESSAGE value="Trying to remove from git the .iml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to remove from git the .iml file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1291,6 +1319,22 @@
             <element signature="e#753#754#0" expanded="true" />
             <element signature="e#782#783#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
