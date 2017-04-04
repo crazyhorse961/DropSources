@@ -1,3 +1,7 @@
 main: com.crazyhoorse961.sourcedrops.SourceDrop
 name: SourceDrop
 version: BETA
+
+commands:
+  dump:
+    usage: /dump
