@@ -2,4 +2,6 @@ chests:
   support:
     items:
     name: ''
+    enabled: false
+    delay: 200
   drop:
