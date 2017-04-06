@@ -34,6 +34,20 @@ public class SourceCommand implements CommandExecutor
                 return true;
             case 1:
                 sendHelp(player);
+            case 2:
+                switch(strings[0]){
+                    case "create":
+
+                       // player.getTargetBlock(null, 10);
+                    case "remove":
+                        if(!player.hasPermission("source.remove")){
+                            player.sendMessage(ChatColor.RED + "Missing permission");
+                            return true;
+                        }
+                        plugin.getConfig().set("chests." + strings[1], null);
+                        player.sendMessage(ChatColor.GREEN + "AirDrop removed!");
+                        return true;
+                }
         }
         return false;
     }

@@ -39,7 +39,7 @@ public class SpawnListener implements Listener
                     }
                 }
             }
-            if(chestName.isEmpty()){
+            if(chestName.isEmpty() || chestName == null){
                 return;
             }
             Location newLoc = new Location(p.getWorld(), p.getLocation().getX(), p.getLocation().getY() + 30, p.getLocation().getZ());
