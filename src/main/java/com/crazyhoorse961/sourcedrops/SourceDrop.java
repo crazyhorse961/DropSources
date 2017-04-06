@@ -4,6 +4,7 @@ package com.crazyhoorse961.sourcedrops;/**
 
 import com.crazyhoorse961.sourcedrops.commands.DumpCommand;
 import com.crazyhoorse961.sourcedrops.serializer.ItemSerializer;
+import com.crazyhoorse961.sourcedrops.utils.ClickActions;
 import com.crazyhoorse961.sourcedrops.utils.Dumper;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -23,6 +24,7 @@ public class SourceDrop extends JavaPlugin
     @Override
     public void onEnable(){
         saveDefaultConfig();
+        ClickActions.init(this);
         createCache();
         dumper = new Dumper();
         itemSerializer = new ItemSerializer(this);
