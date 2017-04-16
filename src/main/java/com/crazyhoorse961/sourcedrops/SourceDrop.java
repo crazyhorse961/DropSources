@@ -29,11 +29,10 @@ public class SourceDrop extends JavaPlugin
         dumper = new Dumper();
         itemSerializer = new ItemSerializer(this);
         new DumpCommand(this);
-
     }
 
     @Override
-    public void onDisable(){
+    public void onDisable() {
         saveConfig();
     }
 
@@ -47,6 +46,9 @@ public class SourceDrop extends JavaPlugin
 
     public ItemSerializer getItemSerializer() {
         return itemSerializer;
+    }
+    public ClickActions getClickable(){
+        return ClickActions.getInstance();
     }
 
     private void createCache() {

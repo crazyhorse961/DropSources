@@ -1,3 +1,10 @@
+keys-generic:
+  material-for-keys: TRIPWIRE_HOOK
+  keys-format-name: '&7[%KEY%&7] ✗%AMOUNT%'
+  keys-format-lore: '&7✗%AMOUNT% of %KEY%'
+  glow: true
+  droppable: true 
+
 chests:
   support:
     items:

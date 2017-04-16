@@ -46,7 +46,7 @@ public class FallListener implements Listener
                 Chest c = (Chest) e.getBlock().getState();
                 Inventory toFill = c.getInventory();
                 if(hasData){
-                    hasData = !hasData;
+                    hasData = false;
                     fallingBlock.setDropItem(false);
                     //Filling items
                     //'meta' is the chest name for recognizing
