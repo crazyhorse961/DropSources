@@ -4,23 +4,74 @@ package com.crazyhoorse961.sourcedrops.utils;/**
 
 
 
-import org.json.JSONObject;
+import com.besaba.revonline.pastebinapi.impl.factory.PastebinFactory;
+import com.besaba.revonline.pastebinapi.paste.Paste;
+import com.besaba.revonline.pastebinapi.paste.PasteBuilder;
+import com.besaba.revonline.pastebinapi.paste.PasteExpire;
+import com.besaba.revonline.pastebinapi.paste.PasteVisiblity;
+import com.besaba.revonline.pastebinapi.response.Response;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+
 
 import javax.xml.bind.DatatypeConverter;
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
+
+import java.lang.instrument.Instrumentation;
+import java.nio.charset.Charset;
 import java.security.MessageDigest;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.StringJoiner;
+import java.util.*;
+import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 /**
  * @author crazyhoorse961
  */
 public class Dumper {
+
+    public String generateHaste() throws IOException {
+        String key = Pastebin.KEY.get();
+        PastebinFactory fac = new PastebinFactory();
+        PasteBuilder builder = fac.createPaste();
+        com.besaba.revonline.pastebinapi.Pastebin pbin = fac.createPastebin(key);
+        builder.setTitle("Dump #" + getDumpTime());
+        builder.setRaw(getErrors() + " \n" + getChecksum());
+        builder.setMachineFriendlyLanguage("text");
+        builder.setVisiblity(PasteVisiblity.Unlisted);
+        builder.setExpire(PasteExpire.Never);
+        Paste past = builder.build();
+        Response<String> risp = pbin.post(past);
+        if(risp.hasError()){
+            Bukkit.getLogger().log(Level.SEVERE,"Critical error occured while pasting dump!!!!!");
+            return ChatColor.RED + "Severe error occured. Do you have internet?";
+        }
+        return risp.get();
+    }
+
+    private String getChecksum(){
+        try(InputStream is = new FileInputStream(Dumper.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath())){
+            MessageDigest md = MessageDigest.getInstance("SHA-512");
+            byte[] usg = new byte[4096];
+            int lenght;
+            while((lenght = is.read(usg)) > 0){
+                md.update(usg, 0, lenght);
+            }
+            return DatatypeConverter.printHexBinary(md.digest());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    private long getDumpTime(){
+        long start = System.nanoTime();
+        long count = 0L;
+        for(long x = 0; x < Integer.MAX_VALUE; x++){
+            count+=1;
+        }
+        long end = System.nanoTime();
+        return end-start;
+    }
 
     private String getErrors(){
         List<String> data = new ArrayList<String>();
@@ -37,49 +88,6 @@ public class Dumper {
                 data.add(joiner.toString());
         }
         return data.stream().map(Object::toString).collect(Collectors.joining("\n"));
-    }
-
-    public String generateHaste(){
-        HttpURLConnection connection = null;
-        try {
-            //Create connection
-            URL url = new URL( "https://hastebin.com/documents");
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("POST");
-            connection.setDoInput(true);
-            connection.setDoOutput(true);
-
-            //Send request
-            DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
-            wr.writeBytes(getErrors() + "\n" + getChecksum());
-            wr.flush();
-            wr.close();
-
-            //Get Response
-            BufferedReader rd = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            return "https://hastebin.com/" + new JSONObject(rd.readLine()).getString("key");
-
-        } catch (IOException e) {
-            return null;
-        } finally {
-            if (connection == null) return null;
-            connection.disconnect();
-        }
-    }
-
-    private String getChecksum(){
-        try(InputStream is = new FileInputStream(Dumper.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath())){
-            MessageDigest md = MessageDigest.getInstance("SHA-512");
-            byte[] usg = new byte[4096];
-            int lenght;
-            while((lenght = is.read(usg)) > 0){
-                md.update(usg, 0, lenght);
-            }
-            return DatatypeConverter.printHexBinary(md.digest());
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return "";
     }
 
 }
