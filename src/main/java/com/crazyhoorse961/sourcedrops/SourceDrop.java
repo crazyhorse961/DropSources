@@ -26,7 +26,7 @@ public class SourceDrop extends JavaPlugin
     @Override
     public void onEnable(){
         saveDefaultConfig();
-        ClickActions.init(this);
+        ClickActions.initialize(this);
         createCache();
         dumper = new Dumper();
         itemSerializer = new ItemSerializer(this);
@@ -50,6 +50,7 @@ public class SourceDrop extends JavaPlugin
     public ItemSerializer getItemSerializer() {
         return itemSerializer;
     }
+
     public ClickActions getClickable(){
         return ClickActions.getInstance();
     }

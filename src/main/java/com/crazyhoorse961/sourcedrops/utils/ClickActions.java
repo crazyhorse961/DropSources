@@ -1,8 +1,5 @@
-package com.crazyhoorse961.sourcedrops.utils;/**
- * Created by nini7 on 06.04.2017.
- */
+package com.crazyhoorse961.sourcedrops.utils;
 
-import com.crazyhoorse961.sourcedrops.SourceDrop;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -50,7 +47,7 @@ public class ClickActions implements Listener {
      * Sets the instance of the plugin
      * @param pluginInstance The plugin instance
      */
-    public static void init(Plugin pluginInstance)
+    public static void initialize(Plugin pluginInstance)
     {
         plugin = pluginInstance;
     }
@@ -58,12 +55,7 @@ public class ClickActions implements Listener {
     /**
      * The singleton instance of the class
      */
-    private static ClickActions instance;
-
-    static{
-        plugin = new SourceDrop();
-       instance = new ClickActions();
-    }
+    private static final ClickActions instance = new ClickActions();
 
     /**
      * Gets the instance of the class
