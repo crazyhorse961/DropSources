@@ -55,7 +55,7 @@ public class ClickActions implements Listener {
     /**
      * The singleton instance of the class
      */
-    private static final ClickActions instance = new ClickActions();
+    private static ClickActions instance;
 
     /**
      * Gets the instance of the class
@@ -63,7 +63,7 @@ public class ClickActions implements Listener {
      */
     public static ClickActions getInstance()
     {
-        return instance;
+        return instance == null ? (instance = new ClickActions()) : instance;
     }
 
     ////////////////////////////////////////////////////
