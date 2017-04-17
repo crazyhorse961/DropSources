@@ -6,10 +6,12 @@ import com.crazyhoorse961.sourcedrops.SourceDrop;
 
 import net.md_5.bungee.api.ChatColor;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
 
 /**
  * @author crazyhoorse961
@@ -25,7 +27,7 @@ public class DumpCommand implements CommandExecutor
     }
 
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if(commandSender instanceof ConsoleCommandSender){
+        if(!(commandSender instanceof Player)){
             commandSender.sendMessage(ChatColor.GREEN + "Here you dump! " + plugin.getDumper().generateHaste());
             return true;
         }else{

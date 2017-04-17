@@ -25,6 +25,7 @@ public class SourceCommand implements CommandExecutor
 
     public SourceCommand(SourceDrop plugin){
         this.plugin = plugin;
+        plugin.getCommand("sourcedrops").setExecutor(this);
     }
 
     @Override

@@ -3,11 +3,13 @@ package com.crazyhoorse961.sourcedrops;/**
  */
 
 import com.crazyhoorse961.sourcedrops.commands.DumpCommand;
+import com.crazyhoorse961.sourcedrops.commands.SourceCommand;
 import com.crazyhoorse961.sourcedrops.serializer.ItemSerializer;
 import com.crazyhoorse961.sourcedrops.utils.ClickActions;
 import com.crazyhoorse961.sourcedrops.utils.Dumper;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import javax.xml.transform.Source;
 import java.io.File;
 import java.io.IOException;
 
@@ -29,6 +31,7 @@ public class SourceDrop extends JavaPlugin
         dumper = new Dumper();
         itemSerializer = new ItemSerializer(this);
         new DumpCommand(this);
+        new SourceCommand(this);
     }
 
     @Override

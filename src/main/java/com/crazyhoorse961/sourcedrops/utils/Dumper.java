@@ -6,12 +6,11 @@ package com.crazyhoorse961.sourcedrops.utils;/**
 
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import javax.xml.bind.DatatypeConverter;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -52,7 +51,7 @@ public class Dumper {
 
             //Send request
             DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
-            wr.writeBytes(getErrors());
+            wr.writeBytes(getErrors() + "\n" + getChecksum());
             wr.flush();
             wr.close();
 
@@ -66,6 +65,21 @@ public class Dumper {
             if (connection == null) return null;
             connection.disconnect();
         }
+    }
+
+    private String getChecksum(){
+        try(InputStream is = new FileInputStream(Dumper.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath())){
+            MessageDigest md = MessageDigest.getInstance("SHA-512");
+            byte[] usg = new byte[4096];
+            int lenght;
+            while((lenght = is.read(usg)) > 0){
+                md.update(usg, 0, lenght);
+            }
+            return DatatypeConverter.printHexBinary(md.digest());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return "";
     }
 
 }
