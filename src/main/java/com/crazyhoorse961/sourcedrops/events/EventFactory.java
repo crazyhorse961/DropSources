@@ -7,17 +7,17 @@ import org.bukkit.event.Event;
 /**
  * Created by nini7 on 01.04.2017.
  */
-public enum EventFactory
-{
-    OPEN,SPAWN,REMOVE;
+public enum EventFactory {
+    OPEN, SPAWN, REMOVE;
 
     private Event event;
 
-    public void call(){
+    public void call() {
 
     }
-    public EventFactory init(Player p, Location dropLoc){
-        switch(this){
+
+    public EventFactory init(Player p, Location dropLoc) {
+        switch (this) {
             case OPEN:
                 this.event = new PlayerOpenDropEvent(p, dropLoc);
                 return OPEN;

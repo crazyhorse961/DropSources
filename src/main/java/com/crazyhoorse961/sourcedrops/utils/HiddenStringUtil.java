@@ -1,10 +1,13 @@
 package com.crazyhoorse961.sourcedrops.utils;/**
  * Created by nini7 on 04.04.2017.
+ *
+ * @author crazyhoorse961
  */
 
 /**
  * @author crazyhoorse961
  */
+
 import org.bukkit.ChatColor;
 
 import java.nio.charset.Charset;

@@ -3,14 +3,16 @@ package com.crazyhoorse961.sourcedrops.serializer;/**
  */
 
 import com.crazyhoorse961.sourcedrops.SourceDrop;
-
 import org.bukkit.Material;
 import org.bukkit.configuration.serialization.ConfigurationSerialization;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import javax.xml.bind.DatatypeConverter;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,11 +20,10 @@ import java.util.Map;
 /**
  * @author crazyhoorse961
  */
-public class ItemSerializer
-{
+public class ItemSerializer {
     private final SourceDrop plugin;
 
-    public ItemSerializer(SourceDrop plugin){
+    public ItemSerializer(SourceDrop plugin) {
         this.plugin = plugin;
     }
 

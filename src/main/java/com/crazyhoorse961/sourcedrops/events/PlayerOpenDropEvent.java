@@ -11,28 +11,28 @@ import org.bukkit.event.HandlerList;
 /**
  * @author crazyhoorse961
  */
-public class PlayerOpenDropEvent extends Event implements Cancellable
-{
+public class PlayerOpenDropEvent extends Event implements Cancellable {
 
+    private static final HandlerList HANDLERS = new HandlerList();
     private Player player;
     private Location dropLoc;
-    private static final HandlerList HANDLERS = new HandlerList();
     private boolean cancelled = false;
+
+    private PlayerOpenDropEvent() {
+    }
+
+    public PlayerOpenDropEvent(Player player, Location dropLoc) {
+        this.player = player;
+        this.dropLoc = dropLoc;
+    }
+
+    public static HandlerList getHandlerList() {
+        return HANDLERS;
+    }
 
     @Override
     public HandlerList getHandlers() {
         return HANDLERS;
-    }
-
-    public static HandlerList getHandlerList(){
-        return HANDLERS;
-    }
-
-    private PlayerOpenDropEvent(){ }
-
-    public PlayerOpenDropEvent(Player player, Location dropLoc){
-        this.player = player;
-        this.dropLoc = dropLoc;
     }
 
     public Player getPlayer() {

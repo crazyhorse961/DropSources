@@ -8,48 +8,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
-public class Updater
-{
-
-    public enum UpdateResult
-    {
-        NO_UPDATE,
-        FAIL,
-        UPDATE_AVAILABLE
-    }
-
-    public class UpdateResults
-    {
-        private UpdateResult result;
-        private String version;
-
-        public UpdateResults(UpdateResult result, String version)
-        {
-            this.result = result;
-            this.version = version;
-        }
-
-        public UpdateResult getResult()
-        {
-            return result;
-        }
-
-        public String getVersion()
-        {
-            return version;
-        }
-    }
+public class Updater {
 
     private String urlBase;
     private String APIKey;
     private String currentVersion;
-
     private String resourceUrl;
-
     private JavaPlugin plugin;
 
-    public Updater(JavaPlugin plugin, String resourceUrl)
-    {
+    public Updater(JavaPlugin plugin, String resourceUrl) {
         this.plugin = plugin;
 
         this.resourceUrl = resourceUrl;
@@ -59,59 +26,50 @@ public class Updater
         currentVersion = plugin.getDescription().getVersion().split(" ")[0];
     }
 
-    public UpdateResults checkForUpdates()
-    {
+    public UpdateResults checkForUpdates() {
 
-            try
-            {
-                HttpURLConnection con = (HttpURLConnection) new URL(urlBase).openConnection();
+        try {
+            HttpURLConnection con = (HttpURLConnection) new URL(urlBase).openConnection();
 
-                con.setDoOutput(true);
-                con.setRequestMethod("POST");
-                con.getOutputStream()
-                        .write(("key=" + APIKey + "&resource=" + resourceUrl).getBytes("UTF-8"));
+            con.setDoOutput(true);
+            con.setRequestMethod("POST");
+            con.getOutputStream()
+                    .write(("key=" + APIKey + "&resource=" + resourceUrl).getBytes("UTF-8"));
 
-                if (con.getResponseCode() == 500)
-                    return new UpdateResults(UpdateResult.FAIL, "Server responded with code 500: Internal server error");
+            if (con.getResponseCode() == 500)
+                return new UpdateResults(UpdateResult.FAIL, "Server responded with code 500: Internal server error");
 
-                String version = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
+            String version = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
 
-                con.disconnect();
+            con.disconnect();
 
-                if (compareVersion(version) == 0 || compareVersion(version) == 1)
-                    return new UpdateResults(UpdateResult.NO_UPDATE, null);
-                else
-                    return new UpdateResults(UpdateResult.UPDATE_AVAILABLE, version);
-            }
-        catch (Exception ex)
-            {
-                return new UpdateResults(UpdateResult.FAIL, ex.toString());
+            if (compareVersion(version) == 0 || compareVersion(version) == 1)
+                return new UpdateResults(UpdateResult.NO_UPDATE, null);
+            else
+                return new UpdateResults(UpdateResult.UPDATE_AVAILABLE, version);
+        } catch (Exception ex) {
+            return new UpdateResults(UpdateResult.FAIL, ex.toString());
         }
 
     }
 
-    private int compareVersion(String newVersion)
-    {
+    private int compareVersion(String newVersion) {
         Scanner currentV = new Scanner(currentVersion);
         Scanner newV = new Scanner(newVersion);
 
         currentV.useDelimiter("\\.");
         newV.useDelimiter("\\.");
 
-        while(currentV.hasNextInt() && newV.hasNextInt())
-        {
+        while (currentV.hasNextInt() && newV.hasNextInt()) {
             int cV = currentV.nextInt();
             int nV = newV.nextInt();
 
-            if(cV < nV)
-            {
+            if (cV < nV) {
                 currentV.close();
                 newV.close();
 
                 return -1;
-            }
-            else if(cV > nV)
-            {
+            } else if (cV > nV) {
                 currentV.close();
                 newV.close();
 
@@ -119,8 +77,7 @@ public class Updater
             }
         }
 
-        if(currentV.hasNextInt())
-        {
+        if (currentV.hasNextInt()) {
             currentV.close();
             newV.close();
 
@@ -130,5 +87,29 @@ public class Updater
         currentV.close();
         newV.close();
         return 0;
+    }
+
+    public enum UpdateResult {
+        NO_UPDATE,
+        FAIL,
+        UPDATE_AVAILABLE
+    }
+
+    public class UpdateResults {
+        private UpdateResult result;
+        private String version;
+
+        public UpdateResults(UpdateResult result, String version) {
+            this.result = result;
+            this.version = version;
+        }
+
+        public UpdateResult getResult() {
+            return result;
+        }
+
+        public String getVersion() {
+            return version;
+        }
     }
 }

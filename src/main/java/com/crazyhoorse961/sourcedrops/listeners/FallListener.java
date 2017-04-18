@@ -19,8 +19,7 @@ import java.util.concurrent.Callable;
 /**
  * @author crazyhoorse961
  */
-public class FallListener implements Listener
-{
+public class FallListener implements Listener {
 
     private final SourceDrop plugin;
 
@@ -28,24 +27,24 @@ public class FallListener implements Listener
 
     private String meta;
 
-    public FallListener(SourceDrop plugin){
+    public FallListener(SourceDrop plugin) {
         this.plugin = plugin;
     }
 
     @EventHandler
-    public void onFall(EntityChangeBlockEvent e){
-        if(e.getEntityType() == EntityType.FALLING_BLOCK && e.getEntity() instanceof FallingBlock){
+    public void onFall(EntityChangeBlockEvent e) {
+        if (e.getEntityType() == EntityType.FALLING_BLOCK && e.getEntity() instanceof FallingBlock) {
             FallingBlock fallingBlock = (FallingBlock) e.getEntity();
-            if(fallingBlock.getMaterial() == Material.CHEST && e.getBlock().getState() instanceof Chest){
+            if (fallingBlock.getMaterial() == Material.CHEST && e.getBlock().getState() instanceof Chest) {
                 plugin.getConfig().getConfigurationSection("chests").getKeys(false).forEach(s -> {
-                    if(fallingBlock.hasMetadata(s)){
+                    if (fallingBlock.hasMetadata(s)) {
                         lambda(() -> hasData = true);
                         lambda(() -> meta = s);
                     }
                 });
                 Chest c = (Chest) e.getBlock().getState();
                 Inventory toFill = c.getInventory();
-                if(hasData){
+                if (hasData) {
                     hasData = false;
                     fallingBlock.setDropItem(false);
                     //Filling items
@@ -57,10 +56,11 @@ public class FallListener implements Listener
             }
         }
     }
-    private void lambda(Callable c){
+
+    private void lambda(Callable c) {
         try {
             c.call();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

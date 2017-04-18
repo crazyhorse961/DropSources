@@ -17,29 +17,28 @@ import org.bukkit.metadata.FixedMetadataValue;
 /**
  * @author crazyhoorse961
  */
-public class SpawnListener implements Listener
-{
+public class SpawnListener implements Listener {
 
     private final SourceDrop plugin;
 
-    public SpawnListener(SourceDrop plugin){
+    public SpawnListener(SourceDrop plugin) {
         this.plugin = plugin;
     }
 
     @EventHandler
-    public void onClick(PlayerInteractEvent e){
+    public void onClick(PlayerInteractEvent e) {
         Player p = e.getPlayer();
-        if(e.getItem() != null && e.getItem().hasItemMeta() && e.getItem().getItemMeta().hasLore()){
+        if (e.getItem() != null && e.getItem().hasItemMeta() && e.getItem().getItemMeta().hasLore()) {
             String chestName = null;
-            for(String str : e.getItem().getItemMeta().getLore()){
-                if(HiddenStringUtil.hasHiddenString(str)){
-                    if(HiddenStringUtil.extractHiddenString(str).startsWith("chest ")){
+            for (String str : e.getItem().getItemMeta().getLore()) {
+                if (HiddenStringUtil.hasHiddenString(str)) {
+                    if (HiddenStringUtil.extractHiddenString(str).startsWith("chest ")) {
                         chestName = HiddenStringUtil.extractHiddenString(str).split(" ")[1];
                         break;
                     }
                 }
             }
-            if(chestName.isEmpty() || chestName == null){
+            if (chestName.isEmpty() || chestName == null) {
                 return;
             }
             Location newLoc = new Location(p.getWorld(), p.getLocation().getX(), p.getLocation().getY() + 30, p.getLocation().getZ());
