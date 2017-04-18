@@ -3,6 +3,7 @@ package com.crazyhoorse961.sourcedrops.listeners;/**
  */
 
 import com.crazyhoorse961.sourcedrops.SourceDrop;
+import com.google.common.base.CaseFormat;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Chest;
@@ -49,9 +50,12 @@ public class FallListener implements Listener {
                     fallingBlock.setDropItem(false);
                     //Filling items
                     //'meta' is the chest name for recognizing
+
                     ItemStack[] items = plugin.getItemSerializer().stringToItems(plugin.getConfig().getString("chests." + meta + ".items"));
                     c.setCustomName(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("chests." + meta + ".name")));
                     toFill.setContents(items);
+                    c.setCustomName(ChatColor.GREEN + meta + " Drop");
+                    c.update();
                 }
             }
         }
