@@ -49,7 +49,7 @@ public class FileLogger {
 
         try {
 
-            debugFileHandler = new FileHandler(plugin.getDataFolder().getAbsolutePath() + File.pathSeparator + plugin.getName() + ".log", true);
+            debugFileHandler = new FileHandler(plugin.getDataFolder().getAbsolutePath() + File.separator+ plugin.getName() + ".log", true);
             SimpleFormatter formatter = new SimpleFormatter();
 
             debugLogger.addHandler(debugFileHandler);

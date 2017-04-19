@@ -27,8 +27,6 @@ public class SourceDrop extends JavaPlugin {
     private ItemSerializer itemSerializer;
     private FileLogger fileLogger;
 
-    private SourceDrop(){}
-
     @Override
     public void onLoad(){
         saveDefaultConfig();
