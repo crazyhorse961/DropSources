@@ -14,6 +14,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.metadata.FixedMetadataValue;
 
 import java.util.concurrent.Callable;
 
@@ -48,13 +49,11 @@ public class FallListener implements Listener {
                 if (hasData) {
                     hasData = false;
                     fallingBlock.setDropItem(false);
-                    //Filling items
-                    //'meta' is the chest name for recognizing
-
                     ItemStack[] items = plugin.getItemSerializer().stringToItems(plugin.getConfig().getString("chests." + meta + ".items"));
                     c.setCustomName(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("chests." + meta + ".name")));
                     toFill.setContents(items);
                     c.setCustomName(ChatColor.GREEN + meta + " Drop");
+                    c.setMetadata(meta, new FixedMetadataValue(plugin, meta));
                     c.update();
                 }
             }

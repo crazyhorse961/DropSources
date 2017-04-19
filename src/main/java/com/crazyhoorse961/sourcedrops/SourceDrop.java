@@ -10,6 +10,7 @@ import com.crazyhoorse961.sourcedrops.utils.Dumper;
 import com.crazyhoorse961.sourcedrops.utils.logging.FileLogger;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import javax.xml.transform.Source;
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
@@ -25,6 +26,8 @@ public class SourceDrop extends JavaPlugin {
     private File cache;
     private ItemSerializer itemSerializer;
     private FileLogger fileLogger;
+
+    private SourceDrop(){}
 
     @Override
     public void onLoad(){
