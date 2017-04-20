@@ -2,6 +2,9 @@ package com.crazyhoorse961.sourcedrops;/**
  * Created by nini7 on 01.04.2017.
  */
 
+import com.crazyhoorse961.sourcedrops.api.DropAPI;
+import com.crazyhoorse961.sourcedrops.api.DropManager;
+import com.crazyhoorse961.sourcedrops.api.ManagerAPI;
 import com.crazyhoorse961.sourcedrops.commands.DumpCommand;
 import com.crazyhoorse961.sourcedrops.commands.SourceCommand;
 import com.crazyhoorse961.sourcedrops.serializer.ItemSerializer;
@@ -26,10 +29,13 @@ public class SourceDrop extends JavaPlugin {
     private File cache;
     private ItemSerializer itemSerializer;
     private FileLogger fileLogger;
+    private ManagerAPI apiManager;
+    private DropAPI api;
 
     @Override
     public void onLoad(){
         saveDefaultConfig();
+        apiManager = new DropManager();
         fileLogger = new FileLogger(this);
         fileLogger.debug(Level.INFO, "--------------------------------", true);
         fileLogger.debug(Level.INFO, String.valueOf(System.currentTimeMillis()), true);
@@ -73,6 +79,14 @@ public class SourceDrop extends JavaPlugin {
 
     public ClickActions getClickable() {
         return ClickActions.getInstance();
+    }
+
+    public DropAPI createDrop() {
+        return apiManager.create();
+    }
+
+    public ManagerAPI getApiManager() {
+        return apiManager;
     }
 
     private void createCache() {
