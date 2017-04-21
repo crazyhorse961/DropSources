@@ -1,14 +1,6 @@
 keys-generic:
-  material-for-keys: TRIPWIRE_HOOK
-  keys-format-name: '&7[%KEY%&7] ✗%AMOUNT%'
-  keys-format-lore: '&7✗%AMOUNT% of %KEY%'
-  glow: true
-  droppable: true 
-
-chests:
-  support:
-    items:
-    name: ''
-    enabled: false
-    delay: 200
-  drop:
+  material: TRIPWIRE_HOOK
+  name: '&7[%KEY%&7] ✗%AMOUNT%'
+  lore: '&7✗%AMOUNT% of %KEY%'
+  glowing: true
+lang:
